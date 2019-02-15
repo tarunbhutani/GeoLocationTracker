@@ -14,6 +14,9 @@
 		3D9CF6EE22166AA0006F700F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D9CF6EC22166AA0006F700F /* LaunchScreen.storyboard */; };
 		3D9CF6F922166AA0006F700F /* GeoLocationTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9CF6F822166AA0006F700F /* GeoLocationTrackerTests.swift */; };
 		3D9CF70422166AA0006F700F /* GeoLocationTrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9CF70322166AA0006F700F /* GeoLocationTrackerUITests.swift */; };
+		D665C3F77C2FBF8CAE8BCDDA /* Pods_GeoLocationTrackerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BAA0854634203F07EFD5271 /* Pods_GeoLocationTrackerUITests.framework */; };
+		DC140CB1252A5B534855337E /* Pods_GeoLocationTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1FED09ED2DD0EE0F52809DF /* Pods_GeoLocationTracker.framework */; };
+		EA32927CDEDF2A6F49940FF0 /* Pods_GeoLocationTrackerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06477FF5D31DD2EC2E47073F /* Pods_GeoLocationTrackerTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00A3870F45BD8EA7EFE0164D /* Pods-GeoLocationTrackerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeoLocationTrackerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GeoLocationTrackerTests/Pods-GeoLocationTrackerTests.release.xcconfig"; sourceTree = "<group>"; };
+		06477FF5D31DD2EC2E47073F /* Pods_GeoLocationTrackerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeoLocationTrackerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D9CF6E022166A9F006F700F /* GeoLocationTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeoLocationTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D9CF6E322166A9F006F700F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3D9CF6E522166A9F006F700F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +52,13 @@
 		3D9CF6FF22166AA0006F700F /* GeoLocationTrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeoLocationTrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D9CF70322166AA0006F700F /* GeoLocationTrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoLocationTrackerUITests.swift; sourceTree = "<group>"; };
 		3D9CF70522166AA0006F700F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8BAA0854634203F07EFD5271 /* Pods_GeoLocationTrackerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeoLocationTrackerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF256A4059BD1B7034AD57C2 /* Pods-GeoLocationTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeoLocationTracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GeoLocationTracker/Pods-GeoLocationTracker.debug.xcconfig"; sourceTree = "<group>"; };
+		C1FED09ED2DD0EE0F52809DF /* Pods_GeoLocationTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeoLocationTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBBDFF73987A5CC5A42B1DC5 /* Pods-GeoLocationTrackerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeoLocationTrackerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GeoLocationTrackerTests/Pods-GeoLocationTrackerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E0393012EE7F7851CEDDBE62 /* Pods-GeoLocationTrackerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeoLocationTrackerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GeoLocationTrackerUITests/Pods-GeoLocationTrackerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E7C9D76450B5AF0D06875FAB /* Pods-GeoLocationTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeoLocationTracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-GeoLocationTracker/Pods-GeoLocationTracker.release.xcconfig"; sourceTree = "<group>"; };
+		F9BC5AB19A9014060666B4AF /* Pods-GeoLocationTrackerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeoLocationTrackerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GeoLocationTrackerUITests/Pods-GeoLocationTrackerUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC140CB1252A5B534855337E /* Pods_GeoLocationTracker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA32927CDEDF2A6F49940FF0 /* Pods_GeoLocationTrackerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +82,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D665C3F77C2FBF8CAE8BCDDA /* Pods_GeoLocationTrackerUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A7315C38EB54FA75EE5AD14 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C1FED09ED2DD0EE0F52809DF /* Pods_GeoLocationTracker.framework */,
+				06477FF5D31DD2EC2E47073F /* Pods_GeoLocationTrackerTests.framework */,
+				8BAA0854634203F07EFD5271 /* Pods_GeoLocationTrackerUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		11B79B898CE1FF7EF6638DC0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BF256A4059BD1B7034AD57C2 /* Pods-GeoLocationTracker.debug.xcconfig */,
+				E7C9D76450B5AF0D06875FAB /* Pods-GeoLocationTracker.release.xcconfig */,
+				DBBDFF73987A5CC5A42B1DC5 /* Pods-GeoLocationTrackerTests.debug.xcconfig */,
+				00A3870F45BD8EA7EFE0164D /* Pods-GeoLocationTrackerTests.release.xcconfig */,
+				E0393012EE7F7851CEDDBE62 /* Pods-GeoLocationTrackerUITests.debug.xcconfig */,
+				F9BC5AB19A9014060666B4AF /* Pods-GeoLocationTrackerUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		3D9CF6D722166A9F006F700F = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +119,8 @@
 				3D9CF6F722166AA0006F700F /* GeoLocationTrackerTests */,
 				3D9CF70222166AA0006F700F /* GeoLocationTrackerUITests */,
 				3D9CF6E122166A9F006F700F /* Products */,
+				11B79B898CE1FF7EF6638DC0 /* Pods */,
+				0A7315C38EB54FA75EE5AD14 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,9 +172,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3D9CF70822166AA0006F700F /* Build configuration list for PBXNativeTarget "GeoLocationTracker" */;
 			buildPhases = (
+				8140AA8A2ED1189EB2B6B367 /* [CP] Check Pods Manifest.lock */,
 				3D9CF6DC22166A9F006F700F /* Sources */,
 				3D9CF6DD22166A9F006F700F /* Frameworks */,
 				3D9CF6DE22166A9F006F700F /* Resources */,
+				1157260A7CB4157EAB936AB4 /* [CP] Embed Pods Frameworks */,
+				6B1377F5F9903DF4794B19E2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +192,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3D9CF70B22166AA0006F700F /* Build configuration list for PBXNativeTarget "GeoLocationTrackerTests" */;
 			buildPhases = (
+				656E8DCF4D1C1BEC1DFF3A9A /* [CP] Check Pods Manifest.lock */,
 				3D9CF6F022166AA0006F700F /* Sources */,
 				3D9CF6F122166AA0006F700F /* Frameworks */,
 				3D9CF6F222166AA0006F700F /* Resources */,
+				12FAF37ACC269C8CF0AD8F0E /* [CP] Embed Pods Frameworks */,
+				3D5A83DEB91203C62ECFA612 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +213,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3D9CF70E22166AA0006F700F /* Build configuration list for PBXNativeTarget "GeoLocationTrackerUITests" */;
 			buildPhases = (
+				BB27D80E1DF6B45D83789156 /* [CP] Check Pods Manifest.lock */,
 				3D9CF6FB22166AA0006F700F /* Sources */,
 				3D9CF6FC22166AA0006F700F /* Frameworks */,
 				3D9CF6FD22166AA0006F700F /* Resources */,
+				C8D85DC9AC7A8A2B30C8696F /* [CP] Embed Pods Frameworks */,
+				EF88FF8BF53B1CEDDC841F1B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -250,6 +299,168 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1157260A7CB4157EAB936AB4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-GeoLocationTracker/Pods-GeoLocationTracker-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GeoLocationTracker/Pods-GeoLocationTracker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		12FAF37ACC269C8CF0AD8F0E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GeoLocationTrackerTests/Pods-GeoLocationTrackerTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3D5A83DEB91203C62ECFA612 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GeoLocationTrackerTests/Pods-GeoLocationTrackerTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		656E8DCF4D1C1BEC1DFF3A9A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GeoLocationTrackerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6B1377F5F9903DF4794B19E2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GeoLocationTracker/Pods-GeoLocationTracker-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8140AA8A2ED1189EB2B6B367 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GeoLocationTracker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BB27D80E1DF6B45D83789156 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GeoLocationTrackerUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C8D85DC9AC7A8A2B30C8696F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GeoLocationTrackerUITests/Pods-GeoLocationTrackerUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF88FF8BF53B1CEDDC841F1B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GeoLocationTrackerUITests/Pods-GeoLocationTrackerUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3D9CF6DC22166A9F006F700F /* Sources */ = {
@@ -430,15 +641,13 @@
 		};
 		3D9CF70922166AA0006F700F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF256A4059BD1B7034AD57C2 /* Pods-GeoLocationTracker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZM8VHL4XRH;
 				INFOPLIST_FILE = GeoLocationTracker/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.geofence.wifi.location.GeoLocationTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -448,15 +657,13 @@
 		};
 		3D9CF70A22166AA0006F700F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7C9D76450B5AF0D06875FAB /* Pods-GeoLocationTracker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZM8VHL4XRH;
 				INFOPLIST_FILE = GeoLocationTracker/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.geofence.wifi.location.GeoLocationTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -466,17 +673,14 @@
 		};
 		3D9CF70C22166AA0006F700F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DBBDFF73987A5CC5A42B1DC5 /* Pods-GeoLocationTrackerTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZM8VHL4XRH;
 				INFOPLIST_FILE = GeoLocationTrackerTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.geofence.wifi.location.GeoLocationTrackerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -487,17 +691,14 @@
 		};
 		3D9CF70D22166AA0006F700F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 00A3870F45BD8EA7EFE0164D /* Pods-GeoLocationTrackerTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZM8VHL4XRH;
 				INFOPLIST_FILE = GeoLocationTrackerTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.geofence.wifi.location.GeoLocationTrackerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -508,16 +709,13 @@
 		};
 		3D9CF70F22166AA0006F700F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E0393012EE7F7851CEDDBE62 /* Pods-GeoLocationTrackerUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZM8VHL4XRH;
 				INFOPLIST_FILE = GeoLocationTrackerUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.geofence.wifi.location.GeoLocationTrackerUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -528,16 +726,13 @@
 		};
 		3D9CF71022166AA0006F700F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F9BC5AB19A9014060666B4AF /* Pods-GeoLocationTrackerUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZM8VHL4XRH;
 				INFOPLIST_FILE = GeoLocationTrackerUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.geofence.wifi.location.GeoLocationTrackerUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
