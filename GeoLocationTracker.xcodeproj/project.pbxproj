@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D1D474A22169A0F00610F1A /* NetworkInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1D474922169A0F00610F1A /* NetworkInfo.swift */; };
+		3D1D474E2216A23700610F1A /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1D474D2216A23700610F1A /* TabBarViewController.swift */; };
 		3D9CF6E422166A9F006F700F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9CF6E322166A9F006F700F /* AppDelegate.swift */; };
 		3D9CF6E622166A9F006F700F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9CF6E522166A9F006F700F /* ViewController.swift */; };
 		3D9CF6E922166A9F006F700F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D9CF6E722166A9F006F700F /* Main.storyboard */; };
@@ -39,6 +41,9 @@
 /* Begin PBXFileReference section */
 		00A3870F45BD8EA7EFE0164D /* Pods-GeoLocationTrackerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeoLocationTrackerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GeoLocationTrackerTests/Pods-GeoLocationTrackerTests.release.xcconfig"; sourceTree = "<group>"; };
 		06477FF5D31DD2EC2E47073F /* Pods_GeoLocationTrackerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeoLocationTrackerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D1D474922169A0F00610F1A /* NetworkInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkInfo.swift; sourceTree = "<group>"; };
+		3D1D474B22169BCC00610F1A /* GeoLocationTracker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GeoLocationTracker.entitlements; sourceTree = "<group>"; };
+		3D1D474D2216A23700610F1A /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		3D9CF6E022166A9F006F700F /* GeoLocationTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeoLocationTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D9CF6E322166A9F006F700F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3D9CF6E522166A9F006F700F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -112,6 +117,23 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		3D1D4748221699FD00610F1A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3D1D474922169A0F00610F1A /* NetworkInfo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3D1D474C2216A1FA00610F1A /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3D1D474D2216A23700610F1A /* TabBarViewController.swift */,
+				3D9CF6E522166A9F006F700F /* ViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		3D9CF6D722166A9F006F700F = {
 			isa = PBXGroup;
 			children = (
@@ -137,8 +159,10 @@
 		3D9CF6E222166A9F006F700F /* GeoLocationTracker */ = {
 			isa = PBXGroup;
 			children = (
+				3D1D474C2216A1FA00610F1A /* ViewController */,
+				3D1D474B22169BCC00610F1A /* GeoLocationTracker.entitlements */,
+				3D1D4748221699FD00610F1A /* Model */,
 				3D9CF6E322166A9F006F700F /* AppDelegate.swift */,
-				3D9CF6E522166A9F006F700F /* ViewController.swift */,
 				3D9CF6E722166A9F006F700F /* Main.storyboard */,
 				3D9CF6EA22166AA0006F700F /* Assets.xcassets */,
 				3D9CF6EC22166AA0006F700F /* LaunchScreen.storyboard */,
@@ -242,6 +266,11 @@
 				TargetAttributes = {
 					3D9CF6DF22166A9F006F700F = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.AccessWiFi = {
+								enabled = 1;
+							};
+						};
 					};
 					3D9CF6F322166AA0006F700F = {
 						CreatedOnToolsVersion = 10.1;
@@ -467,7 +496,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D1D474E2216A23700610F1A /* TabBarViewController.swift in Sources */,
 				3D9CF6E622166A9F006F700F /* ViewController.swift in Sources */,
+				3D1D474A22169A0F00610F1A /* NetworkInfo.swift in Sources */,
 				3D9CF6E422166A9F006F700F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -644,10 +675,14 @@
 			baseConfigurationReference = BF256A4059BD1B7034AD57C2 /* Pods-GeoLocationTracker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = GeoLocationTracker/GeoLocationTracker.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZM8VHL4XRH;
 				INFOPLIST_FILE = GeoLocationTracker/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.geofence.wifi.location.GeoLocationTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -660,10 +695,14 @@
 			baseConfigurationReference = E7C9D76450B5AF0D06875FAB /* Pods-GeoLocationTracker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = GeoLocationTracker/GeoLocationTracker.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZM8VHL4XRH;
 				INFOPLIST_FILE = GeoLocationTracker/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.geofence.wifi.location.GeoLocationTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -680,7 +719,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZM8VHL4XRH;
 				INFOPLIST_FILE = GeoLocationTrackerTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.geofence.wifi.location.GeoLocationTrackerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -698,7 +741,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZM8VHL4XRH;
 				INFOPLIST_FILE = GeoLocationTrackerTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.geofence.wifi.location.GeoLocationTrackerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -715,7 +762,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZM8VHL4XRH;
 				INFOPLIST_FILE = GeoLocationTrackerUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.geofence.wifi.location.GeoLocationTrackerUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -732,7 +783,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZM8VHL4XRH;
 				INFOPLIST_FILE = GeoLocationTrackerUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.geofence.wifi.location.GeoLocationTrackerUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
