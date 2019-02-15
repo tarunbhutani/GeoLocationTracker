@@ -1,0 +1,6 @@
+framework module Pods_GeoLocationTrackerTests {
+  umbrella header "Pods-GeoLocationTrackerTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
