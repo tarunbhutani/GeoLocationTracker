@@ -10,6 +10,8 @@ target 'GeoLocationTracker' do
     pod 'RxCocoa'
     pod 'RxDataSources'
     pod 'RealmSwift'
+    pod 'IQKeyboardManagerSwift'
+    pod 'Toast-Swift'
 
   target 'GeoLocationTrackerTests' do
     inherit! :search_paths

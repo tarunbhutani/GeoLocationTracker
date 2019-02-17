@@ -7,8 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D18D6972217B61000EFB1E1 /* UpdateUserLocationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D18D6962217B61000EFB1E1 /* UpdateUserLocationDelegate.swift */; };
+		3D18D69A2217BC7300EFB1E1 /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D18D6992217BC7300EFB1E1 /* RealmService.swift */; };
+		3D18D69C2217E4BC00EFB1E1 /* GeofenceAreasViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D18D69B2217E4BC00EFB1E1 /* GeofenceAreasViewModel.swift */; };
 		3D1D474A22169A0F00610F1A /* NetworkInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1D474922169A0F00610F1A /* NetworkInfo.swift */; };
 		3D1D474E2216A23700610F1A /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1D474D2216A23700610F1A /* TabBarViewController.swift */; };
+		3D1D478A2216C65600610F1A /* AddNewGeoLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1D47892216C65600610F1A /* AddNewGeoLocationViewController.swift */; };
+		3D1D478C2216C8AD00610F1A /* LocationPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1D478B2216C8AD00610F1A /* LocationPickerViewController.swift */; };
+		3D1D478F2216D7AE00610F1A /* LocationPickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1D478E2216D7AE00610F1A /* LocationPickerViewModel.swift */; };
+		3D1D47922216D9A500610F1A /* BaseOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1D47912216D9A500610F1A /* BaseOperation.swift */; };
+		3D1D47942216D9E100610F1A /* LocalSearchOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1D47932216D9E100610F1A /* LocalSearchOperation.swift */; };
+		3D88114222195F860073E8FE /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D88114122195F860073E8FE /* Utilities.swift */; };
 		3D9CF6E422166A9F006F700F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9CF6E322166A9F006F700F /* AppDelegate.swift */; };
 		3D9CF6E622166A9F006F700F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9CF6E522166A9F006F700F /* ViewController.swift */; };
 		3D9CF6E922166A9F006F700F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D9CF6E722166A9F006F700F /* Main.storyboard */; };
@@ -16,6 +25,7 @@
 		3D9CF6EE22166AA0006F700F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D9CF6EC22166AA0006F700F /* LaunchScreen.storyboard */; };
 		3D9CF6F922166AA0006F700F /* GeoLocationTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9CF6F822166AA0006F700F /* GeoLocationTrackerTests.swift */; };
 		3D9CF70422166AA0006F700F /* GeoLocationTrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9CF70322166AA0006F700F /* GeoLocationTrackerUITests.swift */; };
+		3DE1497B2217A0C4005E2CD9 /* GeoLocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE1497A2217A0C4005E2CD9 /* GeoLocationModel.swift */; };
 		D665C3F77C2FBF8CAE8BCDDA /* Pods_GeoLocationTrackerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BAA0854634203F07EFD5271 /* Pods_GeoLocationTrackerUITests.framework */; };
 		DC140CB1252A5B534855337E /* Pods_GeoLocationTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1FED09ED2DD0EE0F52809DF /* Pods_GeoLocationTracker.framework */; };
 		EA32927CDEDF2A6F49940FF0 /* Pods_GeoLocationTrackerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06477FF5D31DD2EC2E47073F /* Pods_GeoLocationTrackerTests.framework */; };
@@ -41,9 +51,18 @@
 /* Begin PBXFileReference section */
 		00A3870F45BD8EA7EFE0164D /* Pods-GeoLocationTrackerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeoLocationTrackerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GeoLocationTrackerTests/Pods-GeoLocationTrackerTests.release.xcconfig"; sourceTree = "<group>"; };
 		06477FF5D31DD2EC2E47073F /* Pods_GeoLocationTrackerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeoLocationTrackerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D18D6962217B61000EFB1E1 /* UpdateUserLocationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateUserLocationDelegate.swift; sourceTree = "<group>"; };
+		3D18D6992217BC7300EFB1E1 /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
+		3D18D69B2217E4BC00EFB1E1 /* GeofenceAreasViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeofenceAreasViewModel.swift; sourceTree = "<group>"; };
 		3D1D474922169A0F00610F1A /* NetworkInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkInfo.swift; sourceTree = "<group>"; };
 		3D1D474B22169BCC00610F1A /* GeoLocationTracker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GeoLocationTracker.entitlements; sourceTree = "<group>"; };
 		3D1D474D2216A23700610F1A /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		3D1D47892216C65600610F1A /* AddNewGeoLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewGeoLocationViewController.swift; sourceTree = "<group>"; };
+		3D1D478B2216C8AD00610F1A /* LocationPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPickerViewController.swift; sourceTree = "<group>"; };
+		3D1D478E2216D7AE00610F1A /* LocationPickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPickerViewModel.swift; sourceTree = "<group>"; };
+		3D1D47912216D9A500610F1A /* BaseOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseOperation.swift; sourceTree = "<group>"; };
+		3D1D47932216D9E100610F1A /* LocalSearchOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalSearchOperation.swift; sourceTree = "<group>"; };
+		3D88114122195F860073E8FE /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		3D9CF6E022166A9F006F700F /* GeoLocationTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeoLocationTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D9CF6E322166A9F006F700F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3D9CF6E522166A9F006F700F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +76,7 @@
 		3D9CF6FF22166AA0006F700F /* GeoLocationTrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeoLocationTrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D9CF70322166AA0006F700F /* GeoLocationTrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoLocationTrackerUITests.swift; sourceTree = "<group>"; };
 		3D9CF70522166AA0006F700F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3DE1497A2217A0C4005E2CD9 /* GeoLocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoLocationModel.swift; sourceTree = "<group>"; };
 		8BAA0854634203F07EFD5271 /* Pods_GeoLocationTrackerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeoLocationTrackerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF256A4059BD1B7034AD57C2 /* Pods-GeoLocationTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeoLocationTracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GeoLocationTracker/Pods-GeoLocationTracker.debug.xcconfig"; sourceTree = "<group>"; };
 		C1FED09ED2DD0EE0F52809DF /* Pods_GeoLocationTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeoLocationTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,10 +137,27 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		3D18D6932217AA8D00EFB1E1 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				3D18D6962217B61000EFB1E1 /* UpdateUserLocationDelegate.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		3D18D6982217BBDF00EFB1E1 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				3D18D6992217BC7300EFB1E1 /* RealmService.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
 		3D1D4748221699FD00610F1A /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				3D1D474922169A0F00610F1A /* NetworkInfo.swift */,
+				3DE1497A2217A0C4005E2CD9 /* GeoLocationModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -130,8 +167,36 @@
 			children = (
 				3D1D474D2216A23700610F1A /* TabBarViewController.swift */,
 				3D9CF6E522166A9F006F700F /* ViewController.swift */,
+				3D1D47892216C65600610F1A /* AddNewGeoLocationViewController.swift */,
+				3D1D478B2216C8AD00610F1A /* LocationPickerViewController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		3D1D478D2216D79700610F1A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3D1D478E2216D7AE00610F1A /* LocationPickerViewModel.swift */,
+				3D18D69B2217E4BC00EFB1E1 /* GeofenceAreasViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3D1D47902216D98F00610F1A /* Operation */ = {
+			isa = PBXGroup;
+			children = (
+				3D1D47912216D9A500610F1A /* BaseOperation.swift */,
+				3D1D47932216D9E100610F1A /* LocalSearchOperation.swift */,
+			);
+			path = Operation;
+			sourceTree = "<group>";
+		};
+		3D88114022195F6F0073E8FE /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				3D88114122195F860073E8FE /* Utilities.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		3D9CF6D722166A9F006F700F = {
@@ -159,9 +224,14 @@
 		3D9CF6E222166A9F006F700F /* GeoLocationTracker */ = {
 			isa = PBXGroup;
 			children = (
+				3D88114022195F6F0073E8FE /* Utilities */,
+				3D1D4748221699FD00610F1A /* Model */,
+				3D18D6982217BBDF00EFB1E1 /* Database */,
+				3D18D6932217AA8D00EFB1E1 /* Protocol */,
+				3D1D47902216D98F00610F1A /* Operation */,
+				3D1D478D2216D79700610F1A /* ViewModel */,
 				3D1D474C2216A1FA00610F1A /* ViewController */,
 				3D1D474B22169BCC00610F1A /* GeoLocationTracker.entitlements */,
-				3D1D4748221699FD00610F1A /* Model */,
 				3D9CF6E322166A9F006F700F /* AppDelegate.swift */,
 				3D9CF6E722166A9F006F700F /* Main.storyboard */,
 				3D9CF6EA22166AA0006F700F /* Assets.xcassets */,
@@ -338,22 +408,26 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-GeoLocationTracker/Pods-GeoLocationTracker-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast_Swift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -497,8 +571,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D1D474E2216A23700610F1A /* TabBarViewController.swift in Sources */,
+				3D1D478C2216C8AD00610F1A /* LocationPickerViewController.swift in Sources */,
+				3D88114222195F860073E8FE /* Utilities.swift in Sources */,
+				3D1D47922216D9A500610F1A /* BaseOperation.swift in Sources */,
+				3D1D478A2216C65600610F1A /* AddNewGeoLocationViewController.swift in Sources */,
 				3D9CF6E622166A9F006F700F /* ViewController.swift in Sources */,
+				3D18D6972217B61000EFB1E1 /* UpdateUserLocationDelegate.swift in Sources */,
+				3D1D478F2216D7AE00610F1A /* LocationPickerViewModel.swift in Sources */,
+				3D18D69A2217BC7300EFB1E1 /* RealmService.swift in Sources */,
+				3DE1497B2217A0C4005E2CD9 /* GeoLocationModel.swift in Sources */,
 				3D1D474A22169A0F00610F1A /* NetworkInfo.swift in Sources */,
+				3D1D47942216D9E100610F1A /* LocalSearchOperation.swift in Sources */,
+				3D18D69C2217E4BC00EFB1E1 /* GeofenceAreasViewModel.swift in Sources */,
 				3D9CF6E422166A9F006F700F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

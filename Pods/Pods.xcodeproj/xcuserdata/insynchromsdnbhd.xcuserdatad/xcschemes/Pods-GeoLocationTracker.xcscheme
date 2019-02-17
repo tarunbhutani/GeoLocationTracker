@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B9027EF67CBC48E26929F0C62043E1CB"
+               BlueprintIdentifier = "E1B971091151DB4150C2405C9205DE26"
                BuildableName = "Pods_GeoLocationTracker.framework"
                BlueprintName = "Pods-GeoLocationTracker"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B9027EF67CBC48E26929F0C62043E1CB"
+            BlueprintIdentifier = "E1B971091151DB4150C2405C9205DE26"
             BuildableName = "Pods_GeoLocationTracker.framework"
             BlueprintName = "Pods-GeoLocationTracker"
             ReferencedContainer = "container:Pods.xcodeproj">

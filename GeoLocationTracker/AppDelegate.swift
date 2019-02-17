@@ -2,23 +2,46 @@
 //  AppDelegate.swift
 //  GeoLocationTracker
 //
-//  Created by InSynchro M SDN BHD on 15/02/2019.
+//  Created by Tarun Bhutani on 15/02/2019.
 //  Copyright © 2019 Tarun Bhutani. All rights reserved.
 //
 
 import UIKit
+import IQKeyboardManagerSwift
+import MapKit
+import UserNotifications
+
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    var locationManager:CLLocationManager?
+    var currentLatitude:Double?
+    var currentLongitude:Double?
+    
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        let networkList = NetworkList.getNetworkInfos()
-        print("Network list is : ", networkList)
-        networkList.forEach{print($0)}
+        determineMyCurrentLocation()
+        // Override point for customization after application launch.
+        IQKeyboardManager.shared.enable = true
+        IQKeyboardManager.shared.shouldResignOnTouchOutside = true
+        IQKeyboardManager.shared.shouldShowToolbarPlaceholder = true
+        IQKeyboardManager.shared.shouldToolbarUsesTextFieldTintColor = true
+        IQKeyboardManager.shared.enableAutoToolbar = false
+        IQKeyboardManager.shared.keyboardDistanceFromTextField = 5.0
+        
+        
+        let options: UNAuthorizationOptions = [.badge, .sound, .alert]
+        UNUserNotificationCenter.current()
+            .requestAuthorization(options: options) { success, error in
+                if let error = error {
+                    print("Error: \(error)")
+                }
+        }
         
         return true
     }
@@ -39,13 +62,96 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
-        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        application.applicationIconBadgeNumber = 0
+        UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+        UNUserNotificationCenter.current().removeAllDeliveredNotifications()
     }
-
-    func applicationWillTerminate(_ application: UIApplication) {
-        // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-    }
-
 
 }
+
+
+
+extension AppDelegate: MKMapViewDelegate, CLLocationManagerDelegate{
+    
+    func determineMyCurrentLocation() {
+        
+        locationManager = CLLocationManager()
+        locationManager?.delegate = self
+        locationManager?.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager?.requestAlwaysAuthorization()
+        
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager?.startUpdatingLocation()
+        }
+    }
+    
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let userLocation:CLLocation = locations[0] as CLLocation
+        
+        // Call stopUpdatingLocation() to stop listening for location updates,
+        // other wise this function will be called every time when user location changes.
+        currentLatitude = userLocation.coordinate.latitude
+        currentLongitude = userLocation.coordinate.longitude
+        
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
+        if region is CLCircularRegion {
+            handleEvent(for: region, upon: "enter region")
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
+        if region is CLCircularRegion {
+            
+            handleEvent(for: region, upon: "exit region")
+        }
+    }
+    
+    func handleEvent(for region: CLRegion!, upon event:String) {
+        /*
+        * get user's location remark and check if the user's device is still connected with the same wifi connection
+        */
+        
+        guard let message = note(from: region.identifier, upon: event) else { return }
+        
+        // Show an alert if application is active
+        if UIApplication.shared.applicationState == .active {
+            
+            window?.rootViewController?.showAlert(withTitle: nil, message: message)
+        } else {
+            // Otherwise present a local notification
+            let notificationContent = UNMutableNotificationContent()
+            notificationContent.body = message
+            notificationContent.sound = UNNotificationSound.default
+            notificationContent.badge = UIApplication.shared.applicationIconBadgeNumber + 1 as NSNumber
+            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
+            let request = UNNotificationRequest(identifier: "location_change",
+                                                content: notificationContent,
+                                                trigger: trigger)
+            UNUserNotificationCenter.current().add(request) { error in
+                if let error = error {
+                    print("Error: \(error)")
+                }
+            }
+        }
+    }
+    
+    func note(from identifier: String, upon event:String) -> String? {
+        let geofenceAreaList = RealmService.instance.getAllObjects(GeoLocationModel.self)
+        
+        guard let matched = Array(geofenceAreaList).filter({
+            $0.identifier == identifier
+        }).first else { return nil }
+        if let wifi = Utilities.getCurrentConnectedWifiSSID(){
+            if matched.wifiSSID ?? "" == wifi{
+                return nil
+            }
+        }
+        return  matched.remark + " \(event)"
+        
+    }
+}
+
 
