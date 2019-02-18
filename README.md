@@ -1,0 +1,1 @@
+Features ✅1. Show all geofence area on map2. Allow you to add and edit geofence area3. Seach for location4. App will notify when enter or exit geofence area.What's next?I will maintain the project with latest syntax and most advanced code style. More code comments are going to be covered as well.Also, unit tests will be added to ensure the quality of the codebase.
