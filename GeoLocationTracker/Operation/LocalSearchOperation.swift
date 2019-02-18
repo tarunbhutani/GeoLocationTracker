@@ -39,9 +39,6 @@ class LocalSearch: BaseOperation {
             self?.finish(true)
         }
         
-        
-        
-        
     }
     
 }

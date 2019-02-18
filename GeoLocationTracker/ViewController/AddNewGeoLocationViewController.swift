@@ -15,8 +15,8 @@ import Toast_Swift
 import RealmSwift
 
 class AddNewGeoLocationViewController: UIViewController {
-    // MARK: properties
     
+    // MARK: properties
     lazy var appDelegate = UIApplication.shared.delegate as? AppDelegate
     var annotation = MKPointAnnotation()
     
@@ -27,6 +27,8 @@ class AddNewGeoLocationViewController: UIViewController {
     
     var selectedLatitude:Double?
     var selectedLongitude:Double?
+    
+    var geoFenceLocationObj:GeoLocationModel?
     
     //MARK: Outlets
     @IBOutlet var mapview: MKMapView!
@@ -46,16 +48,36 @@ class AddNewGeoLocationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        ifUpdateData()
+        
         validateData()
         
         let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleMapviewTap(_:)))
         mapview.addGestureRecognizer(gestureRecognizer)
         mapview.showsUserLocation = true
-        // Get user's connected wifi connection
-        txt_wifi_ssid.text = Utilities.getCurrentConnectedWifiSSID() ?? ""
+        
+    }
+    /*
+     This method will check if the user want to update the existing geofence area detail or want to add new geofence area in db.
+    */
+    private func ifUpdateData(){
+        if let obj = geoFenceLocationObj{
+            self.navigationItem.title = "Update Geofence Area"
+            
+            self.txt_radius.text = String(obj.radius)
+            self.txt_remark.text = obj.remark
+            self.txt_wifi_ssid.text = obj.wifiSSID ?? ""
+            self.addAnotation(coordinate: CLLocationCoordinate2D(latitude: Double(obj.locationLatitude) ?? 0.0, longitude: Double(obj.locationLongitude) ?? 0.0))
+        }else{
+            // Get user's connected wifi connection
+            txt_wifi_ssid.text = Utilities.getCurrentConnectedWifiSSID() ?? ""
+        }
     }
     
     // MARK: Outlets Actions
+    /*
+     Validate and store geofence area in DB.
+    */
     
     @IBAction func addGeoLocation(_ sender: UIBarButtonItem) {
         
@@ -80,7 +102,7 @@ class AddNewGeoLocationViewController: UIViewController {
             let predicate = NSPredicate(format: "locationLatitude = %@ AND locationLongitude = %@", "\(latitude)", "\(longitude)")
             
             RealmService.instance.isObjectExist(GeoLocationModel.self, predicate: predicate){ [weak self] isExist, area in
-                if !isExist {
+                if !isExist || self?.geoFenceLocationObj != nil {
                     self?.storeGeofenceArea(latitude: latitude, longitude: longitude)
                     self?.navigationController?.popViewController(animated: true)
                 } else {
@@ -97,16 +119,17 @@ class AddNewGeoLocationViewController: UIViewController {
      */
     
     @IBAction func presentCurrentLocation(_ sender: UIButton) {
-        
-        self.selectedLatitude = appDelegate?.currentLatitude
-        self.selectedLongitude = appDelegate?.currentLongitude
+        if geoFenceLocationObj == nil{
+            self.selectedLatitude = appDelegate?.currentLatitude
+            self.selectedLongitude = appDelegate?.currentLongitude
+        }
         
         mapview.zoomToUserLocation()
     }
     
     
     func storeGeofenceArea(latitude:Double, longitude:Double) {
-        let identifier = NSUUID().uuidString
+        let identifier = geoFenceLocationObj?.identifier ?? NSUUID().uuidString
         let geopLocation =  GeoLocationModel(value: ["locationLatitude":"\(latitude)",
             "locationLongitude":"\(longitude)",
             "wifiSSID": txt_wifi_ssid.text ?? "",
@@ -130,11 +153,16 @@ class AddNewGeoLocationViewController: UIViewController {
         
         let location = gestureReconizer.location(in: mapview)
         let coordinate = mapview.convert(location,toCoordinateFrom: mapview)
+        addAnotation(coordinate: coordinate)
+    }
+    
+    private func addAnotation(coordinate:CLLocationCoordinate2D){
         self.selectedLatitude = coordinate.latitude
         self.selectedLongitude = coordinate.longitude
         
         annotation.coordinate = coordinate
         mapview.addAnnotation(annotation)
+        mapview.zoomToUserLocation(coordinate: coordinate)
     }
     
     // MARK: - Navigation

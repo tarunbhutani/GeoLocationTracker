@@ -2,7 +2,7 @@
 //  GeoLocationTrackerTests.swift
 //  GeoLocationTrackerTests
 //
-//  Created by InSynchro M SDN BHD on 15/02/2019.
+//  Created by Tarun Bhutani on 15/02/2019.
 //  Copyright © 2019 Tarun Bhutani. All rights reserved.
 //
 

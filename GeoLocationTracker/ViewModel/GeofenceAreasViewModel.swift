@@ -2,7 +2,7 @@
 //  GeofenceAreasViewModel.swift
 //  GeoLocationTracker
 //
-//  Created by InSynchro M SDN BHD on 16/02/2019.
+//  Created by Tarun Bhutani on 16/02/2019.
 //  Copyright © 2019 Tarun Bhutani. All rights reserved.
 //
 
@@ -20,10 +20,9 @@ class GeofenceAreasViewModel {
         return privateGeofenceAreaDatasource.asObservable()
     }
     
-    let disposeBag = DisposeBag()
+    private let disposeBag = DisposeBag()
     
     var notificationToken: NotificationToken? = nil
-    
     
     // MARK: Instance methods
     func fetchGeoFenceAreaList(){

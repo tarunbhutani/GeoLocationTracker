@@ -2,7 +2,7 @@
 //  Utilities.swift
 //  GeoLocationTracker
 //
-//  Created by InSynchro M SDN BHD on 17/02/2019.
+//  Created by Tarun Bhutani on 17/02/2019.
 //  Copyright © 2019 Tarun Bhutani. All rights reserved.
 //
 
@@ -40,7 +40,7 @@ struct Utilities {
 
 extension MKMapView {
     func zoomToUserLocation() {
-        print("userLocation.location ", userLocation.location)
+        
         guard let coordinate = userLocation.location?.coordinate else { return }
         let region = MKCoordinateRegion(center: coordinate, latitudinalMeters: 10000, longitudinalMeters: 10000)
         setRegion(region, animated: true)

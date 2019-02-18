@@ -32,16 +32,6 @@ class ViewController: UIViewController {
     deinit {
         geofenceAreasViewModel.deinitNotification()
     }
-    override func viewWillAppear(_ animated: Bool) {
-        
-        Array(RealmService.instance.getAllObjects(GeoLocationModel.self)).forEach{ geopLocation in
-            let fenceRegion = Utilities.region(with: geopLocation)
-            let isUnderRegion = fenceRegion.contains(CLLocationCoordinate2D(latitude: appDelegate?.currentLatitude ?? 0.0, longitude: appDelegate?.currentLongitude ?? 0.0))
-            
-            print("geopLocation ", geopLocation.remark, " is under region ", isUnderRegion, " radius ", fenceRegion.radius, "current location ", appDelegate?.currentLatitude , ", ", appDelegate?.currentLongitude)
-        }
-        
-    }
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -63,9 +53,11 @@ class ViewController: UIViewController {
     
     private func bindDatasource() {
         geofenceAreasViewModel.geofenceAreaDatasource.subscribe{ [weak self] geoLocationObj in
+            // Remove all anotation...
+            self?.mapview.removeAnnotations(self?.mapview.annotations ?? [])
+            self?.mapview.removeOverlays(self?.mapview.overlays ?? [])
             
-            if let geoLocatioinList = geoLocationObj.element{
-                print("geoLocationList subscriber ", geoLocatioinList)
+            if let geoLocatioinList = geoLocationObj.element {
                 geoLocatioinList.forEach{ [weak self] obj in
                     self?.addAnotation(geoLocationObj: obj)
                     self?.addRadius(geoLocationObj: obj)
@@ -144,13 +136,12 @@ extension ViewController:MKMapViewDelegate{
         return MKOverlayRenderer(overlay: overlay)
     }
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
-        print("control event ", control)
+        
         if let geotification = view.annotation as? MKPointAnnotation{
-            print("click at geolocation ")
+            
             // Query using an NSPredicate
             let predicate = NSPredicate(format: "locationLatitude = %@ AND locationLongitude = %@", "\(geotification.coordinate.latitude)", "\(geotification.coordinate.longitude)")
             guard let object = RealmService.instance.getObject(GeoLocationModel.self, predicate: predicate) else {return}
-            print("Object for info ", object)
             
             let fenceRegion = Utilities.region(with: object)
             let isUnderRegion = fenceRegion.contains(CLLocationCoordinate2D(latitude: appDelegate?.currentLatitude ?? 0.0, longitude: appDelegate?.currentLongitude ?? 0.0))

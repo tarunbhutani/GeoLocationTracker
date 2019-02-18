@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D163615221A6A7E00FA9D45 /* FavoriteLocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D163614221A6A7E00FA9D45 /* FavoriteLocationsViewController.swift */; };
+		3D16361B221A837800FA9D45 /* FavoriteLocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D16361A221A837800FA9D45 /* FavoriteLocationTableViewCell.swift */; };
 		3D18D6972217B61000EFB1E1 /* UpdateUserLocationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D18D6962217B61000EFB1E1 /* UpdateUserLocationDelegate.swift */; };
 		3D18D69A2217BC7300EFB1E1 /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D18D6992217BC7300EFB1E1 /* RealmService.swift */; };
 		3D18D69C2217E4BC00EFB1E1 /* GeofenceAreasViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D18D69B2217E4BC00EFB1E1 /* GeofenceAreasViewModel.swift */; };
@@ -51,6 +53,8 @@
 /* Begin PBXFileReference section */
 		00A3870F45BD8EA7EFE0164D /* Pods-GeoLocationTrackerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeoLocationTrackerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GeoLocationTrackerTests/Pods-GeoLocationTrackerTests.release.xcconfig"; sourceTree = "<group>"; };
 		06477FF5D31DD2EC2E47073F /* Pods_GeoLocationTrackerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeoLocationTrackerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D163614221A6A7E00FA9D45 /* FavoriteLocationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteLocationsViewController.swift; sourceTree = "<group>"; };
+		3D16361A221A837800FA9D45 /* FavoriteLocationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteLocationTableViewCell.swift; sourceTree = "<group>"; };
 		3D18D6962217B61000EFB1E1 /* UpdateUserLocationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateUserLocationDelegate.swift; sourceTree = "<group>"; };
 		3D18D6992217BC7300EFB1E1 /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
 		3D18D69B2217E4BC00EFB1E1 /* GeofenceAreasViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeofenceAreasViewModel.swift; sourceTree = "<group>"; };
@@ -137,6 +141,23 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		3D163618221A835600FA9D45 /* FavoriteLocationVC */ = {
+			isa = PBXGroup;
+			children = (
+				3D163619221A836700FA9D45 /* Cell */,
+				3D163614221A6A7E00FA9D45 /* FavoriteLocationsViewController.swift */,
+			);
+			path = FavoriteLocationVC;
+			sourceTree = "<group>";
+		};
+		3D163619221A836700FA9D45 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				3D16361A221A837800FA9D45 /* FavoriteLocationTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		3D18D6932217AA8D00EFB1E1 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,6 +190,7 @@
 				3D9CF6E522166A9F006F700F /* ViewController.swift */,
 				3D1D47892216C65600610F1A /* AddNewGeoLocationViewController.swift */,
 				3D1D478B2216C8AD00610F1A /* LocationPickerViewController.swift */,
+				3D163618221A835600FA9D45 /* FavoriteLocationVC */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -574,11 +596,13 @@
 				3D1D478C2216C8AD00610F1A /* LocationPickerViewController.swift in Sources */,
 				3D88114222195F860073E8FE /* Utilities.swift in Sources */,
 				3D1D47922216D9A500610F1A /* BaseOperation.swift in Sources */,
+				3D163615221A6A7E00FA9D45 /* FavoriteLocationsViewController.swift in Sources */,
 				3D1D478A2216C65600610F1A /* AddNewGeoLocationViewController.swift in Sources */,
 				3D9CF6E622166A9F006F700F /* ViewController.swift in Sources */,
 				3D18D6972217B61000EFB1E1 /* UpdateUserLocationDelegate.swift in Sources */,
 				3D1D478F2216D7AE00610F1A /* LocationPickerViewModel.swift in Sources */,
 				3D18D69A2217BC7300EFB1E1 /* RealmService.swift in Sources */,
+				3D16361B221A837800FA9D45 /* FavoriteLocationTableViewCell.swift in Sources */,
 				3DE1497B2217A0C4005E2CD9 /* GeoLocationModel.swift in Sources */,
 				3D1D474A22169A0F00610F1A /* NetworkInfo.swift in Sources */,
 				3D1D47942216D9E100610F1A /* LocalSearchOperation.swift in Sources */,

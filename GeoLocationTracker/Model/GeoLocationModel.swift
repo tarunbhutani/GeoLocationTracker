@@ -2,7 +2,7 @@
 //  GeoLocationModel.swift
 //  GeoLocationTracker
 //
-//  Created by InSynchro M SDN BHD on 16/02/2019.
+//  Created by Tarun Bhutani on 16/02/2019.
 //  Copyright © 2019 Tarun Bhutani. All rights reserved.
 //
 
@@ -23,7 +23,9 @@ import MapKit
     override var description: String{
         return "Latitude: \(locationLatitude), Longitude: \(locationLongitude), wifiSSID: \(wifiSSID ?? ""), radius: \(radius), identifier: \(identifier)"
     }
-    
+    override public static func primaryKey() -> String? {
+        return "identifier"
+    }
     convenience init(locationLatitude:String, locationLongitude:String, wifiSSID:String?, radius:Int, remark:String, identifier :String){
         self.init()
         self.locationLatitude = locationLatitude
