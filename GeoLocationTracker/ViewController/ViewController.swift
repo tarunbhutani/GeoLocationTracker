@@ -68,13 +68,13 @@ class ViewController: UIViewController {
     
     private func addAnotation(geoLocationObj : GeoLocationModel) {
         DispatchQueue.main.async { [weak self] in
-            let annotation =  MKPointAnnotation()
+//            let annotation =  MKPointAnnotation()
+//
+//            let CLLCoordType = CLLocationCoordinate2D(latitude: Double(geoLocationObj.locationLatitude) ?? 0.0, longitude:  Double(geoLocationObj.locationLongitude) ?? 0.0)
+//            annotation.coordinate = CLLCoordType
+//            annotation.title = geoLocationObj.remark
             
-            let CLLCoordType = CLLocationCoordinate2D(latitude: Double(geoLocationObj.locationLatitude) ?? 0.0, longitude:  Double(geoLocationObj.locationLongitude) ?? 0.0)
-            annotation.coordinate = CLLCoordType
-            annotation.title = geoLocationObj.remark
-            
-            self?.mapview.addAnnotation(annotation)
+            self?.mapview.addAnnotation(geoLocationObj)
         }
     }
     
@@ -108,7 +108,7 @@ extension ViewController:LocationPickerDelegate{
 extension ViewController:MKMapViewDelegate{
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         let identifier = "myGeoLocation"
-        if annotation is MKPointAnnotation {
+        if annotation is GeoLocationModel {
             var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) as? MKPinAnnotationView
             if annotationView == nil {
                 annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
@@ -137,18 +137,14 @@ extension ViewController:MKMapViewDelegate{
     }
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         
-        if let geotification = view.annotation as? MKPointAnnotation{
+        if let geotification = view.annotation as? GeoLocationModel{
             
-            // Query using an NSPredicate
-            let predicate = NSPredicate(format: "locationLatitude = %@ AND locationLongitude = %@", "\(geotification.coordinate.latitude)", "\(geotification.coordinate.longitude)")
-            guard let object = RealmService.instance.getObject(GeoLocationModel.self, predicate: predicate) else {return}
-            
-            let fenceRegion = Utilities.region(with: object)
+            let fenceRegion = Utilities.region(with: geotification)
             let isUnderRegion = fenceRegion.contains(CLLocationCoordinate2D(latitude: appDelegate?.currentLatitude ?? 0.0, longitude: appDelegate?.currentLongitude ?? 0.0))
-            if isUnderRegion || (Utilities.getCurrentConnectedWifiSSID() ?? "" == object.wifiSSID ?? " "){
-                self.showAlert(withTitle: nil, message: "You are inside of \(object.remark) region")
+            if isUnderRegion || (Utilities.getCurrentConnectedWifiSSID() ?? "" == geotification.wifiSSID ?? " "){
+                self.showAlert(withTitle: nil, message: "You are inside of \(geotification.remark) region")
             }else{
-                self.showAlert(withTitle: nil, message: "You are outside of \(object.remark) region")
+                self.showAlert(withTitle: nil, message: "You are outside of \(geotification.remark) region")
             }
             
             

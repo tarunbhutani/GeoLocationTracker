@@ -47,7 +47,7 @@ class GeofenceAreasViewModel {
                 case .initial(let list ):
                     observer.onNext(Array(list))
                     
-                case .update(let list ,  _, _, _):
+                case .update(let list ,  _ , _ , _ ):
                     observer.onNext(Array(list))
                     
                 case .error(let error):

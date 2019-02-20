@@ -37,3 +37,19 @@ import MapKit
     }
     
 }
+
+extension GeoLocationModel : MKAnnotation{
+    var coordinate: CLLocationCoordinate2D {
+        return CLLocationCoordinate2D(latitude: Double(locationLatitude) ?? 0.0, longitude:  Double(locationLongitude) ?? 0.0)
+    }
+    
+    var title: String? {
+        return remark
+    }
+    
+    var subtitle: String? {
+        
+        return "Radius: \(radius)m"
+    }
+    
+}
